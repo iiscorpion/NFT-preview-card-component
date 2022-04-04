@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+/* Start Variabeles */
+:root{
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+}
+/* End Variabeles */
+
+/* Start Global Rules  */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+}
+body{
+  background-color: var(--Very-dark-blue-main-BG);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 1px);
+  margin: 1.3rem;
+}
+/* img{
+  max-width: 100%;
+} */
+.container{
+  border-radius: 17px;
+  background-color: var(--Very-dark-blue-card-BG);
+  padding: 20px;
+  margin-bottom: 25px;
+}
+@media (min-width: 500px){
+  .container{
+    width: 375px;
+  }
+}
+/* End Global Rules  */
+.container .sub {
+  border-radius: 17px;
+  overflow: hidden;
+  position: relative;
+}
+.container .sub img{
+  width: 100%;
+  display: block;
+}
+.container .sub .icon{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--Cyan);
+  opacity: 0.5;
+  display: none;
+}
+.container .sub .icon img{
+  position: absolute;
+  width: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.container .sub:hover .icon{
+  display: block;
+}
+.container .main h1 {
+  color: var(--White);
+  font-size: 29px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.container .main h1:hover{
+  color: var(--Cyan);
+}
+.container .main p{
+  color: var(--Soft-blue);
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.container .all {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+.eth, .clock {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.eth p {
+  color: var(--Cyan);
+  padding-left: 7px;
+  font-weight: 600;
+}
+.clock p {
+  color: var(--Soft-blue);
+  padding-left: 7px;
+}
+.container .avatare {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.avatare img {
+  height: 34px;
+  border: 2px solid var(--White);
+  border-radius: 25px;
+}
+.avatare p {
+  color: var(--Soft-blue);
+  padding-left: 20px;
+  font-weight: 300;
+}
+.avatare p span {
+  color: var(--White);
+}
+.avatare p span:hover {
+  color: var(--Cyan);
+}
